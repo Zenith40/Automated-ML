@@ -1,7 +1,6 @@
 streamlit
 pandas
 numpy
-scikit-learn >= 0.20 
-pickle
+scikit-learn
 xgboost
 python
