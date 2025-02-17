@@ -7,7 +7,6 @@ from sklearn.preprocessing import MinMaxScaler, StandardScaler
 from sklearn.model_selection import train_test_split as tts
 from sklearn.impute import SimpleImputer
 import pickle
-import io
 
 # Classification
 from sklearn.linear_model import LogisticRegression
@@ -140,8 +139,9 @@ if uploaded_file is not None:
         st.success("Model Trained Successfully")
 
         
-        data = pickle_model(model)
-        st.download_button("Download .pkl file", data=data.getvalue(), file_name="my-pickled-model.pkl", use_container_width=True)
+        #data = pickle_model(model)
+        #st.download_button("Download .pkl file", data=data.getvalue(), file_name="my-pickled-model.pkl", use_container_width=True)
+        st.download_button("Download .pkl file",data=pickle.dumps(model_dict[model]),file_name="my-pickled-model.pkl", use_container_width=True)
 
     if st.sidebar.button("Future Scope", use_container_width=True):
         st.checkbox('Vizualization')
