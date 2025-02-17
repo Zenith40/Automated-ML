@@ -125,10 +125,10 @@ if uploaded_file is not None:
 
     st.sidebar.subheader("Train the Model on Whole Dataset :")
 
-    def pickle_model(model):
-        f = io.BytesIO()
-        pickle.dump(model, f)
-        return f
+    #def pickle_model(model):
+        #f = io.BytesIO()
+        #pickle.dump(model, f)
+        #return f
 
     if st.sidebar.button("Train", use_container_width=True):
 
